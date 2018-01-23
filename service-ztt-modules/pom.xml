@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.zhangtiantong.service</groupId>
+    <artifactId>service-ztt-modules</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>service-ztt-modules</name>
+    <description>Demo project for Spring Boot</description>
+
+    <parent>
+        <groupId>com.zhangtiantong.springboot</groupId>
+        <artifactId>spring-boot-program-first</artifactId>
+        <version>0.0.1-SNAPSHOT</version>
+    </parent>
+
+    <modules>
+        <module>module-ztt-eureka</module>
+        <module>module-ztt-eurekaClient1</module>
+        <module>module-ztt-eurekaClient2</module>
+        <module>module-ztt-ribbon</module>
+        <module>module-ztt-feign</module>
+        <module>module-ztt-zuul</module>
+        <module>module-ztt-configserver</module>
+        <module>module-ztt-configclient</module>
+        <module>module-ztt-redis</module>
+    </modules>
+</project>
