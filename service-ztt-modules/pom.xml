@@ -27,5 +27,6 @@
         <module>module-ztt-configserver</module>
         <module>module-ztt-configclient</module>
         <module>module-ztt-redis</module>
+        <module>module-ztt-authority</module>
     </modules>
 </project>
