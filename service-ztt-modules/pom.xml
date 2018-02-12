@@ -28,5 +28,6 @@
         <module>module-ztt-configclient</module>
         <module>module-ztt-redis</module>
         <module>module-ztt-authority</module>
+        <module>module-ztt-mybatis</module>
     </modules>
 </project>
