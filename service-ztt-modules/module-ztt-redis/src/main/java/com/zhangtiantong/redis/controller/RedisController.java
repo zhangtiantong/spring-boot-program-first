@@ -20,18 +20,18 @@ public class RedisController {
     @Autowired
     private RedisService redisService;
 
-    @RequestMapping(value = "/setObjectToRedis", method = {RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = "/setObjectToRedis", method = {RequestMethod.POST})
     public void setObjectToRedis(@RequestBody User user) {
         redisService.setObj(user.getId(), user);
     }
 
-    @RequestMapping("/setStrToRedis")
+    @RequestMapping(value = "/setStrToRedis", method = {RequestMethod.POST})
     public void setStrToRedis(String key, String value) {
 
         redisService.setStr(key, value);
     }
 
-    @RequestMapping(value = "/getObjectToRedis", method = {RequestMethod.GET, RequestMethod.POST})
+    @RequestMapping(value = "/getObjectToRedis", method = {RequestMethod.GET})
     @ResponseBody
     public String getObjectToRedis(@RequestBody User user) {
 
@@ -43,6 +43,22 @@ public class RedisController {
     @ResponseBody
     public String getStrToRedis(String key) {
         return redisService.getStr(key);
+    }
+
+    @RequestMapping(value = "/deleteStrToRedis", method = {RequestMethod.DELETE})
+    @ResponseBody
+    public String deleteStrToRedis(String key) {
+        redisService.del(key);
+        return "success";
+    }
+
+    @RequestMapping(value = "/deleteObjToRedis", method = {RequestMethod.DELETE})
+    @ResponseBody
+    public String deleteObjToRedis(@RequestBody User user) {
+
+        redisService.delObj(user.getId());
+        return "success";
+
     }
 
     @RequestMapping("/redisTest")

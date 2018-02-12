@@ -38,7 +38,7 @@ public class RedisService {
     }
 
     public void del(String key) {
-        if (StringUtils.isEmpty(key)) {
+        if (!StringUtils.isEmpty(key)) {
             stringRedisTemplate.delete(key);
         }
     }
